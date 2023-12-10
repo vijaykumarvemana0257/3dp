@@ -14,10 +14,10 @@ export const projects = [
     description: "Work in Progress",
   },
   {
-    title: "Testing",
-    url: "https://github.com/vijaykumarvemana0257",
-    image: "projects/project2.jpg",
-    description: "Work in Progress",
+    title: "E-comm",
+    url: "https://github.com/vijaykumarvemana0257/ecom/tree/main",
+    image: "projects/ecomm.jpg",
+    description: "E-Commerce",
   },
   {
     title: "E-Learn",
