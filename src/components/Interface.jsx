@@ -112,7 +112,7 @@ const AboutSection = (props) => {
        
       </motion.p>
       <motion.button
-        onClick={() => setSection(3)}
+        onClick={() => setSection(4)}
         className={`bg-indigo-600 text-white py-4 px-8 
       rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
@@ -142,9 +142,11 @@ const ExpandEduSection=()=>{
         <div className="mt-8 space-y-4">
         <h2 className="text-3xl md:text-5xl font-bold text-white">Education</h2>
         <h2 className="text-2xl">University of Cincinnati</h2>
+          <h2> MS, Information Technology</h2>
           <h2 className="mx-2">Aug 2023-April 2025</h2>
           <h2 className="text-2xl">VRSEC</h2>
-          <h2 className="mx-2">Aug 2017-Aug 2023</h2>
+          <h2>Bachelors,Electrical and Electronics Engineeering </h2>
+          <h2 className="mx-2">Aug 2017-Aug 2021</h2>
        
         </div>
 
@@ -157,6 +159,7 @@ const ExpandEduSection=()=>{
        
           <h2 className="text-3xl md:text-5xl font-bold text-white">Experience</h2>
           <h2 className="text-2xl">TCS<span className="text-sm">(Tata Consultancy Services)</span></h2>
+          <h2>Assistant System Engineer</h2>
           <h2 className="mx-2">Aug 2021-Aug 2023</h2>
           
           
