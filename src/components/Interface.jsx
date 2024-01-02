@@ -2,6 +2,8 @@ import { ValidationError, useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -351,66 +353,38 @@ const ProjectsSection = () => {
 };
 
 const ContactSection = () => {
-  const [state, handleSubmit] = useForm("mayzgjbd");
+    const resumeUrl = "https://drive.google.com/file/d/1qMwRV61fXfaZX-B4oi_4RN4dkXuXAVMT/view?usp=share_link";
+    const downloadResume = () => {
+      window.open(resumeUrl, '_blank');}
   return (
-    <Section>
-      <h2 className="text-3xl md:text-5xl font-bold">Contact me</h2>
-      <div className="mt-8 p-8 rounded-md bg-white bg-opacity-50 w-96 max-w-full">
-        {state.succeeded ? (
-          <p className="text-gray-900 text-center">Thanks for your message !</p>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <label for="name" className="font-medium text-gray-900 block mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-            />
-            <label
-              for="email"
-              className="font-medium text-gray-900 block mb-1 mt-8"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-            />
-            <ValidationError
-              className="mt-1 text-red-500"
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-            <label
-              for="email"
-              className="font-medium text-gray-900 block mb-1 mt-8"
-            >
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
-            />
-            <ValidationError
-              className="mt-1 text-red-500"
-              errors={state.errors}
-            />
-            <button
-              disabled={state.submitting}
-              className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 "
-            >
-              Submit
+    <Section style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">Contact me</h2>
+      <div className="p-8 rounded-md bg-white bg-opacity-50 max-w-full" style={{ margin: 'auto', width: '100%', maxWidth: '960px' }}>
+        <div className="text-gray-900 text-center text-3xl">
+          <p className="mb-4">Feel free to connect with me or download my resume!</p>
+          <div className="flex justify-center gap-4 mb-4 flex-wrap">
+            <a className="flex items-center" href="https://github.com/vijaykumarvemana0257" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+              <span className="px-2">Github</span>
+            </a>
+
+            <a className="flex items-center" href="https://www.linkedin.com/in/vijaykumarvemana/" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+              <span className="px-2">LinkedIn</span>
+            </a>
+            <a className="flex items-center" href="mailto:vemanava@mail.uc.edu">
+              <IoMdMail />
+              <span className="px-2">Mail</span>
+            </a>
+          </div>
+          <div className="flex justify-center gap-4">
+            <button onClick={downloadResume} className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg">
+              Download Resume
             </button>
-          </form>
-        )}
+          </div>
+        </div>
       </div>
     </Section>
+ 
   );
 };
