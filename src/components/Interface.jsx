@@ -2,9 +2,8 @@ import { ValidationError, useForm } from "@formspree/react";
 import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -353,10 +352,13 @@ const ProjectsSection = () => {
   );
 };
 
+
 const ContactSection = () => {
-    const resumeUrl = "https://drive.google.com/file/d/1qMwRV61fXfaZX-B4oi_4RN4dkXuXAVMT/view?usp=share_link";
-    const downloadResume = () => {
-      window.open(resumeUrl, '_blank');}
+  const resumeUrl = "https://drive.google.com/file/d/1qMwRV61fXfaZX-B4oi_4RN4dkXuXAVMT/view?usp=share_link";
+  const downloadResume = () => {
+    window.open(resumeUrl, '_blank');
+  };
+
   return (
     <Section style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       <h2 className="text-3xl md:text-5xl font-bold text-center mb-8">Contact me</h2>
@@ -365,7 +367,7 @@ const ContactSection = () => {
           <p className="mb-4">Feel free to connect with me or download my resume!</p>
           <div className="flex justify-center gap-4 mb-4 flex-wrap">
             <a className="flex items-center" href="https://github.com/vijaykumarvemana0257" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon />
+              <FaGithub />
               <span className="px-2">Github</span>
             </a>
 
@@ -386,6 +388,7 @@ const ContactSection = () => {
         </div>
       </div>
     </Section>
- 
   );
 };
+
+export default ContactSection;
