@@ -4,6 +4,7 @@ import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Section = (props) => {
   const { children, mobileTop } = props;
@@ -364,7 +365,7 @@ const ContactSection = () => {
           <p className="mb-4">Feel free to connect with me or download my resume!</p>
           <div className="flex justify-center gap-4 mb-4 flex-wrap">
             <a className="flex items-center" href="https://github.com/vijaykumarvemana0257" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
+              <GitHubIcon />
               <span className="px-2">Github</span>
             </a>
 
