@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { currentProjectAtom, projects } from "./Projects";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMdMail } from "eact-icons/io";
+import { IoMdMail } from "react-icons/io";
 
 const Section = (props) => {
   const { children, mobileTop } = props;
