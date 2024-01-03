@@ -8,10 +8,10 @@ import { useEffect, useRef } from "react";
 
 export const projects = [
   {
-    title: "Testing",
+    title: "Social Media",
     url: "https://github.com/vijaykumarvemana0257",
-    image: "projects/project1.jpg",
-    description: "Work in Progress",
+    image: "projects/project1.png",
+    description: "A Video Sharing social Media App",
   },
   {
     title: "E-comm",
@@ -26,16 +26,16 @@ export const projects = [
     description: "E-Learning Platforming",
   },
   {
-    title: "Testing",
+    title: "Todo",
     url: "https://github.com/vijaykumarvemana0257",
-    image: "projects/project3.jpg",
-    description: "Work in Progress",
+    image: "projects/project3.png",
+    description: "A todo Application",
   },
   {
-    title: "Testing",
+    title: "Blog",
     url: "https://github.com/vijaykumarvemana0257",
-    image: "projects/project1.jpg",
-    description: "Work in Progress",
+    image: "projects/project5.png",
+    description: "A MERN blog website",
   },
 ];
 
